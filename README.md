@@ -34,11 +34,13 @@ SphinxPages::master:.
 ```
 
 ## Installation
-To use this way, you have two choices: 1. clone this template repository 2. create a custom repository.
+To use this way, you have three choices: Clone this template repository or create a custom repository.
 ### Clone
-1. Clone this repository: ```git clone git@github.com:Tyxz/SphinxPages.git [name]```
-2. Clone it again and give it the name: ```git clone git@github.com:Tyxz/SphinxPages.git docs```
+1. Clone this repository: ```git clone git@github.com:Tyxz/SphinxPages.git [name] && cd [name]```
+2. Clone it again and give it the name: ```git clone git@github.com:Tyxz/SphinxPages.git docs && cd docs```
 3. Enter docs and checkout gh-branches: ```git checkout -b gh-pages remotes/origin/gh-pages```
+4. Create a Github repository and replace origin with it: ```git remote set-url origin [git@github.com]```
+5. Do the same for the root folder: ```cd .. && git remote set-url origin [git@github.com]```
 ### Custom
 1. Create a new repository: ```mkdir [name] && cd [name] && git init```
 2. Add a Readme: ```touch Readme.md && git add Readme.md && git commit -m "Intial commit"```
