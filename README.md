@@ -6,6 +6,19 @@
 
 A template repository to create sphinx documentation for Github pages.
 
+## Table of Contents
+- [Sphinx Pages](#sphinx-pages)
+  * [Table of Contents](#table-of-contents)
+  * [Indtroduction](#indtroduction)
+  * [Structure](#structure)
+  * [Installation](#installation)
+    + [Clone](#clone)
+    + [Custom](#custom)
+      - [Windows](#windows)
+      - [UNIX](#unix)
+  * [How to use](#how-to-use)
+    + [Hook](#hook)
+
 ## Indtroduction
 
 Github pges is not simply compatible with Sphinx. One thing are the _folder which Github Pages Jekyll implementation ignores. 
@@ -50,7 +63,8 @@ To use this way, you have three choices: Clone this template repository or creat
 6. Create the gh-pages branch: ```git branch gh-pages```
 7. Automatically switch to gh-branches when entering the folder: ```git symbolic-ref HEAD refs/heads/gh-pages```
 8. Clean the branch: ```rm .git/index && git clean -fdx```
-9. Change the Makefile
+9. Create structure and initialize Sphinx ```mkdir -p ../src/docs && cd ../src/docs && sphinx-quickstart```
+10. Change the Makefile
 #### Windows
 ```batch
 [...]
@@ -92,7 +106,7 @@ github:
 	@touch "$(DOCS)/.nojekyll"
 ```
 
-## Use
+## How to use
 
 Now, with two correctly set-up repositories, you can simply call ```make github``` to create your documentation and copy the html folder into your docs folder.
 Afterwards, you are able to push these two repositories independently. Of course, you can also create a hook to do that for you if you push to master.
